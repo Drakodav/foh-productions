@@ -12,6 +12,7 @@ export default defineConfig({
     light: "/rspress-light-logo.png",
     dark: "/rspress-dark-logo.png",
   },
+  base: isDev ? "/" : "/foh-productions/",
   builderConfig: {
     output: {
       assetPrefix: isDev ? "/" : "/foh-productions/",

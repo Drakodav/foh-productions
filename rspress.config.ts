@@ -1,9 +1,9 @@
 import * as path from "path";
 import { defineConfig } from "rspress/config";
 
-const isProd = process.env.NODE_ENV === "prod";
+const isDev = process.env.DEV_ENV === "development";
 
-const base = isProd ? "foh-productions/" : "/";
+const base = isDev ? "/" : "foh-productions/";
 
 export default defineConfig({
   root: path.join(__dirname, "docs"),

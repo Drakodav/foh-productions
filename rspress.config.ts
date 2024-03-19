@@ -3,8 +3,6 @@ import { defineConfig } from "rspress/config";
 
 const isDev = process.env.DEV_ENV === "development";
 
-const base = isDev ? "/" : "foh-productions/";
-
 export default defineConfig({
   root: path.join(__dirname, "docs"),
   title: "foh-productions",
@@ -16,7 +14,7 @@ export default defineConfig({
   },
   builderConfig: {
     output: {
-      assetPrefix: base,
+      assetPrefix: isDev ? "/" : "/foh-productions/",
     },
   },
   themeConfig: {

@@ -14,7 +14,11 @@ export default defineConfig({
     light: "/rspress-light-logo.png",
     dark: "/rspress-dark-logo.png",
   },
-  base: base,
+  builderConfig: {
+    output: {
+      assetPrefix: base,
+    },
+  },
   themeConfig: {
     lastUpdated: true,
     footer: {
